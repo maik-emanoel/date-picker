@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+    --body-bg-color: #F5F5F5;
+    --hover-bg-color: #ECE0FD;
+    --font-primary-color: #666666;
+    --calendar-bg-color: #FFFFFF;
+
+    font-size: 62.5%;
+    font-family: 'Lato', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    font-size: 1.6rem;
+
+    display: grid;
+    place-items: center;
+
+    background: var(--body-bg-color);
+}
+
+#app {
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+}
+
+.calendar-wrapper {
+    max-width: 50rem;
+    width: 100%;
+    min-height: 40rem;
+
+    padding: 3.2rem;
+    border-radius: 1.6rem;
+    background: var(--calendar-bg-color);
+    box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.16);
+}
+
+.headerToolBar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 2.4rem;
+}
+
+.headerToolBar .title {
+    font-weight: 700;
+    font-size: 2rem;
+
+    color: #333333;
+}
+
+#calendar {
+    width: 100%;
+}
+
+#calendar * {
+    border: none;
+}
+
+.fc thead {
+    height: 3.2rem;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    color: var(--font-primary-color);
+}
+
+.fc .fc-daygrid-day-top {
+    justify-content: center;
+    color: var(--font-primary-color);
+}
+
+.btn {
+    all: unset;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+
+    cursor: pointer;
+}
+
+.btn:active, .btn:hover {
+    background: var(--hover-bg-color);
+}
+

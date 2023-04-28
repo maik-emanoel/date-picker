@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Date Picker</title>
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <div class="calendar-wrapper">
+        <div class="headerToolBar">
+          <button class="prev btn">
+            <img
+              src="./assets/chevron-left.svg"
+              alt="Ícone de seta para a esquerda"
+            />
+          </button>
+          <div class="title"></div>
+          <button class="next btn">
+            <img
+              src="./assets/chevron-right.svg"
+              alt="Ícone de seta para a direita"
+            />
+          </button>
+        </div>
+        <div id="calendar"></div>
+      </div>
+    </div>
+
+    <script src="
+https://cdn.jsdelivr.net/npm/fullcalendar@6.1.6/index.global.min.js
+"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>
