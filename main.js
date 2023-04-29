@@ -32,16 +32,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     title.innerHTML = calendar.currentData.viewTitle
 
+    today(calendar)
     prevMonth(calendar)
     nextMonth(calendar)
 
     formatDaysOfWeek()
+    showAddEventWrapper()
 
     function addEvent(title, start, end) {
         calendar.addEvent({
             title: title,
             start: start,
-            end: end.toISOString() || null,
+            end: end || null,
             display: 'block'
         })
     }
@@ -59,8 +61,28 @@ document.addEventListener('DOMContentLoaded', () => {
         titleInput.value = ''
         startInput.value = ''
         endInput.value = ''
+
+        const background = document.querySelector('.background')
+        background.style.display = 'none'
     })
 })
+
+function showAddEventWrapper() {
+    const showAddEventWrapperBtn = document.querySelector('.show-add-event-wrapper')
+
+    showAddEventWrapperBtn.addEventListener('click', () => {
+        const background = document.querySelector('.background')
+        background.style.display = 'initial'
+    })
+}
+
+function today(calendar) {
+    const today = document.querySelector('.today')
+    today.addEventListener('click', () => {
+        calendar.today()
+        title.innerHTML = calendar.currentData.viewTitle
+    })
+}
 
 function nextMonth(calendar) {
     nextBtn.addEventListener('click', () => {
