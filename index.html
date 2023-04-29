@@ -16,23 +16,27 @@
   </head>
   <body>
     <div id="app">
-      <div class="add-event-wrapper">
-        <div class="input-wrapper">
-          <label for="event-name">Nome do evento</label>
-          <input type="text" id="event-name">
-        </div>
+      <div class="background">
+        <div class="add-event-wrapper">
+          <h2>Adicione um novo evento</h2>
 
-        <div class="input-wrapper">
-          <label for="start-date">Data de início</label>
-          <input type="date" name="date" id="start-date">
-        </div>
+          <div class="input-wrapper">
+            <label for="event-name">Nome do evento</label>
+            <input type="text" id="event-name" placeholder="Digite o nome do evento..."/>
+          </div>
 
-        <div class="input-wrapper">
-          <label for="end-date">Data final</label>
-          <input type="date" name="date" id="end-date">
-        </div>
+          <div class="input-wrapper">
+            <label for="start-date">Data de início</label>
+            <input type="date" name="date" id="start-date" />
+          </div>
 
-        <button class="add-event-btn">Adicionar evento</button>
+          <div class="input-wrapper">
+            <label for="end-date">Data final</label>
+            <input type="date" name="date" id="end-date" />
+          </div>
+
+          <button class="add-event-btn">Salvar evento</button>
+        </div>
       </div>
 
       <div class="calendar-wrapper">
@@ -52,6 +56,11 @@
           </button>
         </div>
         <div id="calendar"></div>
+      </div>
+
+      <div class="buttons-wrapper">
+        <button class="today">Hoje</button>
+        <button class="show-add-event-wrapper">Adicionar evento</button>
       </div>
     </div>
 
