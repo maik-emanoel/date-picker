@@ -2,6 +2,8 @@ const prevBtn = document.querySelector('.prev')
 const title = document.querySelector('.title')
 const nextBtn = document.querySelector('.next')
 
+const addEventBtn = document.querySelector('.add-event-btn')
+
 document.addEventListener('DOMContentLoaded', () => {
     const calendarEl = document.getElementById('calendar')
     const calendar = new FullCalendar.Calendar(calendarEl, {
@@ -13,25 +15,16 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         
         height: 'auto',
-
         selectable: true,
         eventBackgroundColor: '#6200EE',
+
         events: [
             {
-              title  : 'event1',
-              start  : '2010-01-01'
-            },
-            {
-              title  : 'event2',
+              title  : 'Focar nos estudos',
               start  : '2023-04-05',
-              end    : '2023-04-09'
-            },
-            {
-              title  : 'event3',
-              start  : '2010-01-09T12:30:00',
-              allDay : false // will make the time show
+              end    : '2023-04-09',
             }
-          ]
+        ]
     })
 
     calendar.render()
@@ -43,6 +36,30 @@ document.addEventListener('DOMContentLoaded', () => {
     nextMonth(calendar)
 
     formatDaysOfWeek()
+
+    function addEvent(title, start, end) {
+        calendar.addEvent({
+            title: title,
+            start: start,
+            end: end.toISOString() || null,
+            display: 'block'
+        })
+    }
+
+    addEventBtn.addEventListener('click', () => {
+        const titleInput = document.querySelector('#event-name');
+        const startInput = document.querySelector('#start-date');
+        const endInput = document.querySelector('#end-date')
+
+        const end = new Date(endInput.value)
+        end.setDate(end.getDate() + 1)
+
+        addEvent(titleInput.value, startInput.value, end)
+
+        titleInput.value = ''
+        startInput.value = ''
+        endInput.value = ''
+    })
 })
 
 function nextMonth(calendar) {
@@ -66,4 +83,3 @@ function formatDaysOfWeek() {
         day.textContent = day.textContent.charAt(0).toUpperCase() + day.textContent.slice(1)
     })
 }
-
