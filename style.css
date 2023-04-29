@@ -97,3 +97,24 @@ body {
     background: var(--hover-bg-color);
 }
 
+.fc .fc-event-time {
+    display: none;
+}
+
+.fc .fc-event-title-container {
+    padding: .4rem .8rem;
+}
+
+.fc .fc-event-title {
+    font-family: 'Roboto', sans-serif;
+}
+
+.add-event-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-wrapper {
+    display: flex;
+    flex-direction: column;
+}
