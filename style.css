@@ -208,3 +208,9 @@ body {
 .add-event-btn:hover {
     box-shadow: none;
 }
+
+@media (max-width: 475px) {
+    :root {
+        font-size: 50%;
+    }
+}
