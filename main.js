@@ -18,12 +18,15 @@ document.addEventListener('DOMContentLoaded', () => {
         selectable: true,
         eventBackgroundColor: '#6200EE',
         dayMaxEventRows: 2,
+        editable: true,
+        eventStartEditable: true,
+        eventResizableFromStart: true,
 
         events: [
             {
               title  : 'Focar nos estudos',
               start  : '2023-04-05',
-              end    : '2023-04-09',
+              end    : '2023-04-09'
             }
         ]
     })
@@ -44,8 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
         calendar.addEvent({
             title: title,
             start: start,
-            end: end || null,
-            display: 'block'
+            end: end || null
         })
     }
 
