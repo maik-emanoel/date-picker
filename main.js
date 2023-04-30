@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
         height: 'auto',
         selectable: true,
         eventBackgroundColor: '#6200EE',
+        dayMaxEventRows: 2,
 
         events: [
             {
@@ -55,6 +56,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const end = new Date(endInput.value)
         end.setDate(end.getDate() + 1)
+
+        if(titleInput.value == '') {
+            alert('Por favor, digite o nome do evento')
+            return
+        }
 
         addEvent(titleInput.value, startInput.value, end)
 
