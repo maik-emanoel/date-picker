@@ -25,8 +25,8 @@ document.addEventListener('DOMContentLoaded', () => {
         events: [
             {
               title  : 'Focar nos estudos',
-              start  : '2023-04-05',
-              end    : '2023-04-09'
+              start  : '2023-04-03',
+              end    : '2023-04-08'
             }
         ]
     })
