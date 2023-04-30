@@ -176,6 +176,15 @@ body {
     background: #f2eded;
 }
 
+.add-event-wrapper .close-btn {
+    position: relative;
+    width: 1.5rem;
+    display: block;
+    margin-left: auto;
+
+    cursor: pointer;
+}
+
 .add-event-wrapper h2 {
     margin-bottom: 3.2rem;
 }
