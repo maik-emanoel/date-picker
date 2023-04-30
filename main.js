@@ -3,6 +3,7 @@ const title = document.querySelector('.title')
 const nextBtn = document.querySelector('.next')
 
 const addEventBtn = document.querySelector('.add-event-btn')
+const background = document.querySelector('.background')
 
 document.addEventListener('DOMContentLoaded', () => {
     const calendarEl = document.getElementById('calendar')
@@ -70,10 +71,16 @@ document.addEventListener('DOMContentLoaded', () => {
         startInput.value = ''
         endInput.value = ''
 
-        const background = document.querySelector('.background')
         background.style.display = 'none'
     })
 })
+
+const closeBtn = document.querySelector('.close-btn')
+closeBtn.addEventListener('click', hideAddEventWrapper)
+
+function hideAddEventWrapper() {
+    background.style.display = 'none'
+}
 
 function showAddEventWrapper() {
     const showAddEventWrapperBtn = document.querySelector('.show-add-event-wrapper')
