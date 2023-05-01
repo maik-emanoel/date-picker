@@ -79,7 +79,12 @@ const closeBtn = document.querySelector('.close-btn')
 closeBtn.addEventListener('click', hideAddEventWrapper)
 
 function hideAddEventWrapper() {
-    background.style.display = 'none'
+    background.classList.add('disappear')
+
+    setTimeout(() => {
+        background.style.display = 'none'
+        background.classList.remove('disappear')
+    }, 300)
 }
 
 function showAddEventWrapper() {
