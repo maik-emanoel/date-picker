@@ -122,12 +122,8 @@ body {
 }
 
 .fc .fc-daygrid-day.fc-day-today {
-    background: #8034ea;
+    background: #ECE0FD;
     border-radius: .8rem;
-}
-
-.fc .fc-daygrid-day.fc-day-today .fc-daygrid-day-number {
-    color: var(--calendar-bg-color);
 }
 
 .buttons-wrapper {
